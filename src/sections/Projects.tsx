@@ -8,48 +8,108 @@ import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
+// const portfolioProjects = [
+//   {
+//     company: "Acme Corp",
+//     year: "2022",
+//     title: "Dark Saas Landing Page",
+//     results: [
+//       { title: "Enhanced user experience by 40%" },
+//       { title: "Improved site speed by 50%" },
+//       { title: "Increased mobile traffic by 35%" },
+//     ],
+//     link: "https://youtu.be/4k7IdSLxh6w",
+//     image: darkSaasLandingPage,
+//   },
+//   {
+//     company: "Innovative Co",
+//     year: "2021",
+//     title: "Light Saas Landing Page",
+//     results: [
+//       { title: "Boosted sales by 20%" },
+//       { title: "Expanded customer reach by 35%" },
+//       { title: "Increased brand awareness by 15%" },
+//     ],
+//     link: "https://youtu.be/7hi5zwO75yc",
+//     image: lightSaasLandingPage,
+//   },
+//   {
+//     company: "Quantum Dynamics",
+//     year: "2023",
+//     title: "AI Startup Landing Page",
+//     results: [
+//       { title: "Enhanced user experience by 40%" },
+//       { title: "Improved site speed by 50%" },
+//       { title: "Increased mobile traffic by 35%" },
+//     ],
+//     link: "https://youtu.be/Z7I5uSRHMHg",
+//     image: aiStartupLandingPage,
+//   },
+// ];
+
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "OEM Client",
+    year: "2023",
+    title: "Warranty Management System",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Developed a full-stack system for managing warranty claims and tracking repairs.",
+      },
+      {
+        title:
+          "Implemented automated workflows, reducing processing time by 40%.",
+      },
+      { title: "Integrated authentication and authorization using JWT." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://github.com/yourusername/warranty-management", // Replace with actual link
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Personal Project",
+    year: "2023",
+    title: "Theater Booking Application",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      {
+        title:
+          "Designed and developed an intuitive ticket booking system with seat selection.",
+      },
+      { title: "Integrated payment gateway for seamless transactions." },
+      { title: "Deployed on Vercel for scalability and performance." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://theater-booking-app.vercel.app", // Replace with actual link
+
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Education Sector",
+    year: "2022",
+    title: "College Management System",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Developed a web application used by multiple institutions in Kerala.",
+      },
+      {
+        title:
+          "Implemented role-based access control for students, faculty, and admins.",
+      },
+      { title: "Optimized database queries, reducing load times by 30%." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://github.com/yourusername/college-management", // Replace with actual link
     image: aiStartupLandingPage,
+    // image: collegeManagementImage, // Replace with actual image import
   },
 ];
 
-export const ProjectsSection = () => {
+interface ProjectSectionProps {
+  id: string;
+}
+
+export const ProjectsSection = ({ id }: ProjectSectionProps) => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id={id}>
       <div className="container">
         <SectionHeader
           eyebrow=" Real-World Results"
@@ -91,7 +151,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  {/* <a href={project.link}>
                     <button
                       className="bg-white text-gray-950 h-12 w-full 
                 md:w-auto px-6 rounded-xl font-semibold inline-flex items-center 
@@ -100,7 +160,7 @@ export const ProjectsSection = () => {
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
-                  </a>
+                  </a> */}
                 </div>
                 <div className="relative ">
                   <Image

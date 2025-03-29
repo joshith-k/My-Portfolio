@@ -41,10 +41,12 @@ const testimonials = [
     avatar: memojiAvatar5,
   },
 ];
-
-export const TestimonialsSection = () => {
+interface TestimonialSectionProps {
+  id: string;
+}
+export const TestimonialsSection = ({ id }: TestimonialSectionProps) => {
   return (
-    <div className="py-16 lg:py-24 ">
+    <div className="py-16 lg:py-24 " id={id}>
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"
