@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection id="hero" />
       <ProjectsSection id="projects" />
       <TapeSection id="tape" />
-      <TestimonialsSection id="testimonials" />
+      {/* <TestimonialsSection id="testimonials" /> */}
       <AboutSection id="about" />
       <ContactSection id="contact" />
 

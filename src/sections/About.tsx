@@ -60,18 +60,18 @@ const toolboxItems = [
     title: "Node.js",
     iconType: NodeJsIcon, // Add correct import for Node.js icon
   },
-  {
-    title: "Express.js",
-    iconType: ExpressIcon, // Add correct import for Express.js icon
-  },
-  {
-    title: "MongoDB",
-    iconType: MongoDbIcon, // Add correct import for MongoDB icon
-  },
-  {
-    title: "MySQL",
-    iconType: MySQLIcon, // Add correct import for MySQL icon
-  },
+  // {
+  //   title: "Express.js",
+  //   iconType: ExpressIcon, // Add correct import for Express.js icon
+  // },
+  // {
+  //   title: "MongoDB",
+  //   iconType: MongoDbIcon, // Add correct import for MongoDB icon
+  // },
+  // {
+  //   title: "MySQL",
+  //   iconType: MySQLIcon, // Add correct import for MySQL icon
+  // },
   {
     title: "Tailwind CSS",
     iconType: TailwindIcon, // Add correct import for Tailwind CSS icon
@@ -167,7 +167,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
         <SectionHeader
           eyebrow="About Me"
           title="A Glimpse Into My World"
-          description="Learn more about Who I am, What I do, and What Inspires me"
+          description="Learn more about who I am, what I do, and what inspires me."
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
@@ -230,7 +230,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
-                description="Explore my Interest and Hobbies beyond the digital realm"
+                description="Explore my interest and hobbies beyond the digital realm"
                 className="px-6 py-6"
               />
               <div className="relative flex-1" ref={constraintsRef}>

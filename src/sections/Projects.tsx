@@ -51,55 +51,60 @@ const portfolioProjects = [
   {
     company: "OEM Client",
     year: "2023",
-    title: "Warranty Management System",
+    title: "Warranty Management System UI",
     results: [
       {
         title:
-          "Developed a full-stack system for managing warranty claims and tracking repairs.",
+          "Implemented a responsive dashboard based on provided Figma designs.",
+      },
+      {
+        title: "Used React and Tailwind CSS to develop reusable UI components.",
       },
       {
         title:
-          "Implemented automated workflows, reducing processing time by 40%.",
+          "Optimized page load times and API integration for a seamless user experience.",
       },
-      { title: "Integrated authentication and authorization using JWT." },
     ],
-    link: "https://github.com/yourusername/warranty-management", // Replace with actual link
-    image: darkSaasLandingPage,
+    link: "https://github.com/yourusername/warranty-ui", // Replace with actual link
   },
   {
-    company: "Personal Project",
+    company: "Client Project",
     year: "2023",
-    title: "Theater Booking Application",
+    title: "Theater Booking Application UI",
     results: [
       {
         title:
-          "Designed and developed an intuitive ticket booking system with seat selection.",
+          "Developed a frontend interface for booking tickets based on a given UI design.",
       },
-      { title: "Integrated payment gateway for seamless transactions." },
-      { title: "Deployed on Vercel for scalability and performance." },
+      {
+        title:
+          "Integrated dynamic seat selection and state management using Redux.",
+      },
+      {
+        title: "Ensured smooth UI updates with optimized React rendering.",
+      },
     ],
     link: "https://theater-booking-app.vercel.app", // Replace with actual link
-
-    image: lightSaasLandingPage,
   },
   {
     company: "Education Sector",
     year: "2022",
-    title: "College Management System",
+    title: "College Management System UI",
     results: [
       {
         title:
-          "Developed a web application used by multiple institutions in Kerala.",
+          "Converted provided designs into a fully responsive React-based admin panel.",
       },
       {
         title:
-          "Implemented role-based access control for students, faculty, and admins.",
+          "Implemented role-based access control with authentication UI flows.",
       },
-      { title: "Optimized database queries, reducing load times by 30%." },
+      {
+        title:
+          "Used Redux and React Query for efficient data fetching and state management.",
+      },
     ],
-    link: "https://github.com/yourusername/college-management", // Replace with actual link
-    image: aiStartupLandingPage,
-    // image: collegeManagementImage, // Replace with actual image import
+    link: "https://github.com/yourusername/college-ui", // Replace with actual link
   },
 ];
 
@@ -162,14 +167,14 @@ export const ProjectsSection = ({ id }: ProjectSectionProps) => {
                     </button>
                   </a> */}
                 </div>
-                <div className="relative ">
+                {/* <div className="relative ">
                   <Image
                     className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full 
                     lg:w-auto lg:max-w-none"
                     src={project.image}
                     alt={project.title}
                   />
-                </div>
+                </div> */}
               </div>
             </Card>
           ))}
