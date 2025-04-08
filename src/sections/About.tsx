@@ -25,7 +25,8 @@ import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
+import { describe } from "node:test";
 
 const toolboxItems = [
   {
@@ -128,7 +129,7 @@ const hobbies = [
     top: "65%",
   },
   {
-    title: "Vehicle Restoration",
+    title: "Gearhead",
     emoji: "⚙️",
     left: "5%",
     top: "5%",
@@ -153,6 +154,18 @@ const books = [
     author: "James Clear",
     description:
       "A guide to building good habits, breaking bad ones, and making small changes that lead to remarkable results.",
+  },
+  {
+    title: "The 5 AM Club",
+    author: "Robin Sharma",
+    description:
+      "A powerful guide to owning your mornings and elevating your life by waking up early and following a disciplined routine.",
+  },
+  {
+    title: "Rich Dad Poor Dad",
+    author: "Robert Kiyosaki",
+    description:
+      "A personal finance classic that contrasts the financial philosophies of Kiyosaki's two 'dads' and emphasizes the importance of financial education.",
   },
 ];
 interface AboutSectionProps {
@@ -193,16 +206,23 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
                 title="My Reads"
                 description="Explore the books shaping my perspective"
               />
-              <div className="px-4 py-2 overflow-hidden animate-move-up  [animation-duration:30s]">
-                <ul className="list-disc pl-4 space-y-2">
-                  {books.map((book, index) => (
-                    <li key={index}>
-                      <p className="font-semibold">{book.title}</p>
-                      <p className="text-sm text-gray-600">by {book.author}</p>
-                      <p className="text-sm text-gray-500">
-                        {book.description}
-                      </p>
-                    </li>
+              <div className="relative px-4 py-2 overflow-hidden h-full">
+                <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b z-10" />
+                <ul className="list-disc pl-4 space-y-2 animate-move-up [animation-duration:20s]">
+                  {[...new Array(2)].fill(0).map((_, loopIndex) => (
+                    <Fragment key={loopIndex}>
+                      {books.map((book) => (
+                        <li key={`${book.title}-${loopIndex}`}>
+                          <p className="font-semibold">{book.title}</p>
+                          <p className="text-sm text-gray-600">
+                            by {book.author}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {book.description}
+                          </p>
+                        </li>
+                      ))}
+                    </Fragment>
                   ))}
                 </ul>
               </div>

@@ -163,16 +163,13 @@ export const HeroSection = ({ id }: HeroSectionProps) => {
             onClick={handleScrollToProjects}
           >
             <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
+            {/* <ArrowDown className="size-4" /> */}
           </button>
-          <a
-            // href="https://wa.me/9744874467?text=Hello%20there!"
-            href="mailto:joshith737@gmail.com"
-            target="_blank"
-          >
+          <a href="/Resume.pdf" download target="_blank">
             <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl relative">
-              <span>👋</span>
-              <span className="font-semibold">Let&apos;s Connect</span>
+              {/* <span>📩</span> */}
+              <ArrowDown className="size-4" />
+              <span className="font-semibold">Download Resume</span>
             </button>
           </a>
         </div>

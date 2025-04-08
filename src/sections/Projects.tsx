@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import warrantyPage from "@/assets/images/warranty.png";
+import schoolErpPage from "@/assets/images/schoolERP.png";
+import theatreLandingPage from "@/assets/images/theatre2.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -19,7 +19,7 @@ import { Card } from "@/components/Card";
 //       { title: "Increased mobile traffic by 35%" },
 //     ],
 //     link: "https://youtu.be/4k7IdSLxh6w",
-//     image: darkSaasLandingPage,
+//     image: warrantyPage,
 //   },
 //   {
 //     company: "Innovative Co",
@@ -31,7 +31,7 @@ import { Card } from "@/components/Card";
 //       { title: "Increased brand awareness by 15%" },
 //     ],
 //     link: "https://youtu.be/7hi5zwO75yc",
-//     image: lightSaasLandingPage,
+//     image: schoolErpPage,
 //   },
 //   {
 //     company: "Quantum Dynamics",
@@ -66,6 +66,7 @@ const portfolioProjects = [
       },
     ],
     link: "https://github.com/yourusername/warranty-ui", // Replace with actual link
+    image: warrantyPage,
   },
   {
     company: "Client Project",
@@ -85,6 +86,7 @@ const portfolioProjects = [
       },
     ],
     link: "https://theater-booking-app.vercel.app", // Replace with actual link
+    image: theatreLandingPage,
   },
   {
     company: "Education Sector",
@@ -105,6 +107,7 @@ const portfolioProjects = [
       },
     ],
     link: "https://github.com/yourusername/college-ui", // Replace with actual link
+    image: schoolErpPage,
   },
 ];
 
@@ -167,14 +170,14 @@ export const ProjectsSection = ({ id }: ProjectSectionProps) => {
                     </button>
                   </a> */}
                 </div>
-                {/* <div className="relative ">
+                <div className="relative ">
                   <Image
                     className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full 
-                    lg:w-auto lg:max-w-none"
+                    lg:w-auto lg:max-w-none rounded-xl"
                     src={project.image}
                     alt={project.title}
                   />
-                </div> */}
+                </div>
               </div>
             </Card>
           ))}
