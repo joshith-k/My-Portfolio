@@ -201,13 +201,13 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
                 ))}
               </div>
             </Card> */}
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+            <Card className="h-[320px] md:col-span-2 lg:col-span-1 overflow-hidden">
               <CardHeader
                 title="My Reads"
                 description="Explore the books shaping my perspective"
               />
-              <div className="relative px-4 py-2 overflow-hidden h-full">
-                <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b z-10" />
+              <div className="overflow-hidden h-full relative px-4 py-2">
+                <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-[#212b38] to-transparent z-10 pointer-events-none" />
                 <ul className="list-disc pl-4 space-y-2 animate-move-up [animation-duration:20s]">
                   {[...new Array(2)].fill(0).map((_, loopIndex) => (
                     <Fragment key={loopIndex}>
