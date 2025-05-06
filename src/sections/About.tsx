@@ -20,7 +20,7 @@ import MongoDbIcon from "@/assets/icons/mongodb.svg";
 import MySQLIcon from "@/assets/icons/mysql.svg";
 import VercelIcon from "@/assets/icons/vercel.svg";
 
-import mapImage from "@/assets/images/map.png";
+import mapImage from "@/assets/images/mapKL.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
